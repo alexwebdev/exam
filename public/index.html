@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="impaqApp">
+<head>
+	<meta charset="utf-8">
+	<title>Zadanie</title>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-mocks/angular-mocks.js"></script>
+	<script src="js/app.js"></script>
+	<link rel="stylesheet" href="bower_components/bootstrap-css/css/bootstrap.css">
+</head>
+<body ng-controller="mainCtrl">
+
+	<div class="container">
+		<table class="table">
+			<thead>
+				<tr>
+					<th></th>
+					<th>id</th>
+					<th>name</th>
+					<th>surname</th>
+					<th>date of birth</th>
+					<th>mobile number</th>
+					<th>address (city + street + house number)</th>
+					<th><button class="btn btn-primary">edit selected</button></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="item in data.users">
+					<td>
+						<input type="checkbox">
+					</td>
+					<td>{{item.id}}</td>
+					<td>{{item.name}}</td>
+					<td>{{item.surname}}</td>
+					<td>{{item.birthname}}</td>
+					<td>{{item.mobile}}</td>
+					<td>{{item.address}}</td>
+					<td>
+						<div class="btn-group">
+							<button class="btn btn-primary">edit</button>
+							<button class="btn btn-primary">delete</button>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+</body>
+</html>
