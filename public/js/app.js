@@ -1,4 +1,4 @@
-angular.module('impaqApp', ['ngResource'])
+angular.module('impaqApp', ['ngResource', 'ngMock'])
 
 	.constant("usersUrl", "http://localhost:2403/users/")
 
