@@ -1,10 +1,6 @@
-angular.module('impaqApp', ['ngResource', 'ngMock'])
+angular.module('impaqApp', ['ngResource'])
 
 	.constant("usersUrl", "http://localhost:2403/users/")
-
-
-
-
 	.controller('mainCtrl', function($scope, $resource, usersUrl) {
 
 		$scope.usersResource = $resource(usersUrl + ":id", {id: "@id"});
